@@ -21,7 +21,7 @@ const columns = (remove_table_index) => [{
   }
 },{
   dataField: "posture",
-  text: "Posture",
+  text: "体态",
   editor: {
       type: Type.SELECT,
       options: posture,
@@ -29,14 +29,14 @@ const columns = (remove_table_index) => [{
 },
 {
   dataField: "behavior",
-  text: "Behavior",
+  text: "行为",
   editor: {
       type: Type.SELECT,
       options: behaviors,
   }
 },{
   dataField: "confidence",
-  text: "Confidence",
+  text: "遮挡",
   editor: {
       type: Type.SELECT,
       options: confidence,
