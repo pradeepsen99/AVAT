@@ -13,7 +13,7 @@ const columns = (remove_table_index) => [{
   editable: false,
 },{
   dataField: "global_id",
-  text: "Glo",
+  text: "编号",
   headerStyle: () => { return { width: "50px", left: 0}; },
   editCellStyle: (cell, row, rowIndex, colIndex) => {
     const backgroundColor = cell > 2101 ? '#00BFFF' : '#00FFFF';

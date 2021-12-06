@@ -1,15 +1,15 @@
 const posture = [{
   value: 'Lying',
-  label: 'Lying'
+  label: '躺'
 },{
   value: 'Sitting',
-  label: 'Sitting'
+  label: '坐'
 },{
   value: 'Kneeling',
-  label: 'Kneeling'
+  label: '跪'
 },{
   value: 'Standing',
-  label: 'Standing'
+  label: '站立'
 }]
 
   export {posture}

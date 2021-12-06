@@ -1,24 +1,24 @@
 const behaviors = [{
   value: 'Feeding',
-  label: 'Feeding'
+  label: '进食'
 },{
   value: 'Drinking',
-  label: 'Drinking'
+  label: '喝水'
 },{
   value: 'Exploratory',
-  label: 'Exploratory'
+  label: '试探'
 },{
   value: 'Social',
-  label: 'Social'
+  label: '社交'
 },{
   value: 'Locomotion',
-  label: 'Locomotion'
+  label: '活动'
 },{
   value: 'Proximity',
-  label: 'Proximity'
+  label: '向物体靠近'
 },{
   value: 'Others',
-  label: 'Others'
+  label: '其他'
 }]
 
 export {behaviors};
