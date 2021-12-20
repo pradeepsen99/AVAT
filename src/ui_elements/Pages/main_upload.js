@@ -174,6 +174,7 @@ var temp_selection_color;
 var on_ready_flag = false;
 var image_frames = []
 var total_frames
+var player_opacity = 0
 
 function save_data(frame_num){
 	//return; //TODO Clear up
@@ -361,7 +362,14 @@ export default function MainUpload() {
 			//TODO Add annotation frame datapoint
 			annotation_type_txt = "f"
 		}
-		annotation_data[currentFrame].push({id: boxCount+annotation_type_txt, global_id: -1,status: "", current: "", behavior: "", posture: "", notes: "", confidence: ""})
+
+		if(inputType === 1){
+			console.log(image_frames[currentFrame]['name'])
+			annotation_data[currentFrame].push({id: boxCount+annotation_type_txt, global_id: -1,status: "", current: "", behavior: "", posture: "", notes: "", dataType: "image", fileName: image_frames[currentFrame]['name']})
+		}else{
+			annotation_data[currentFrame].push({id: boxCount+annotation_type_txt, global_id: -1,status: "", current: "", behavior: "", posture: "", notes: "", dataType: "video", fileName: "frame_"+currentFrame})
+		}
+    //annotation_data[currentFrame].push({id: boxCount+annotation_type_txt, global_id: -1,status: "", current: "", behavior: "", posture: "", notes: "", confidence: ""})
 		console.log(annotation_data[currentFrame])
 		save_data(currentFrame)
 		setBoxCount(boxCount + 1);
@@ -442,8 +450,10 @@ export default function MainUpload() {
 
 	if(playing === true){
 		play_button_text = "Pause"
+		player_opacity = 100
 	}else{
 		play_button_text = "Play"
+		player_opacity = 0
 	}
 
 	const handleSeekChange = e => {
@@ -839,6 +849,7 @@ export default function MainUpload() {
 				save_data={save_data}
 				handle_visual_toggle={handle_visual_toggle}
 				handleInputType={handleInputType}
+				image_frames={image_frames}
 			/>
 			<Toast 
 				onClose={() => changeSave(false)} 
@@ -852,7 +863,7 @@ export default function MainUpload() {
 			{
 				upload === true && 
 				<div style={{display: "grid"}} show={upload}>
-					<div style={{gridColumn: 1, gridRow:1, position: "relative", width: scaling_factor_width, height: scaling_factor_height, top: 0, left: 0, opacity: 0}}>
+					<div style={{gridColumn: 1, gridRow:1, position: "relative", width: scaling_factor_width, height: scaling_factor_height, top: 0, left: 0, opacity: 100}}>
 						{
 							inputType==0 && 
 							<ReactPlayer 
@@ -875,7 +886,7 @@ export default function MainUpload() {
 							/>
 						}
 					</div>
-					<div style={{gridColumn: 1, gridRow:1, position: "relative",  top: 0, left: 0}}>
+					<div style={{gridColumn: 1, gridRow:1, position: "relative",  top: 0, left: 0, opacity: 100-player_opacity}}>
 						<FabricRender 
 							fabricCanvas={fabricCanvas}
 							currentFrame={currentFrame}
