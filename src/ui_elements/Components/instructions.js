@@ -7,17 +7,15 @@ export default function Instructions(){
 
         There are preset keybinds setup to make it easier to use the tool without having to click around. If done properly a combination of mouse and keyboard actions speed up the annotation process. 
         <br></br><br></br>
-        * <kbd>1</kbd> : Mode Switch: Bounding Box<br></br>
-        * <kbd>2</kbd> : Mode Switch: Key Point<br></br>
-        * <kbd>3</kbd> : Mode Switch: Segmentation<br></br>
-        * <kbd>a</kbd> : Add annotation<br></br>
-        * <kbd>r</kbd> : Remove selected annotation<br></br>
-        * <kbd>q</kbd> : Skip backward frame(s)<br></br>
-        * <kbd>s</kbd> : Save annotation<br></br>
-        * <kbd>w</kbd> : Pause/Play<br></br>
-        * <kbd>e</kbd> : Skip forward frame(s)<br></br>
-        * <kbd>c</kbd> : Copy previous annotation<br></br>
-        * <kbd>f</kbd> : Activate/Deactivate scrub mode (Activated by default)<br></br>
+        * <kbd>1</kbd> : 行为标记<br></br>
+        * <kbd>2</kbd> : 矩形框<br></br>
+        * <kbd>4</kbd> : 多边形<br></br>
+        * <kbd>a</kbd> : 增加记录<br></br>
+        * <kbd>q</kbd> : 后退<br></br>
+        * <kbd>s</kbd> : 保存<br></br>
+        * <kbd>w</kbd> :暂停/播放<br></br>
+        * <kbd>e</kbd> : 前进<br></br>
+        * <kbd>c</kbd> : 复制上一图片的标记<br></br>
 
         <br></br><br></br>
         <h3>Uploading Video:</h3>
