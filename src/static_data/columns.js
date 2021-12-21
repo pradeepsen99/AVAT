@@ -15,24 +15,26 @@ const columns = (remove_table_index) => [{
   dataField: "global_id",
   text: "Glo",
   headerStyle: () => { return { width: "70px", left: 0}; }
+
 },{
   dataField: "posture",
-  text: "Posture",
+  text: "体态",
   editor: {
       type: Type.SELECT,
       options: posture,
   }
 },
+// {
+//   dataField: "behavior",
+//   text: "行为",
+//   editor: {
+//       type: Type.SELECT,
+//       options: behaviors,
+//   }
+// },
 {
-  dataField: "behavior",
-  text: "Behavior",
-  editor: {
-      type: Type.SELECT,
-      options: behaviors,
-  }
-},{
   dataField: "confidence",
-  text: "Confidence",
+  text: "遮挡",
   editor: {
       type: Type.SELECT,
       options: confidence,

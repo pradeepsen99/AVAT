@@ -1,17 +1,19 @@
 const confidence = [{
-    value: 'Unambigous',
-    label: 'Unambigous'
+    value: ' No occlusion',
+    label: '无遮挡'
   },{
-    value: 'Reliable',
-    label: 'Reliable'
+    value: 'Minor occlusion',
+    label: '轻度遮挡'
   },{
-    value: 'Seperated',
-    label: 'Seperated'
+    value: 'Split occlusion',
+    label: '分离遮挡'
   },{
-    value: 'Part-missing',
-    label: 'Part-missing'
+    value: 'End occlusion',
+    label: '后部遮挡'
   },{
-    value: 'Suspected',
-    label: 'Suspected'
-  }]
+
+    value: 'Critical occlusion',
+    label: '严重遮挡'
+  },
+]
 export {confidence};
