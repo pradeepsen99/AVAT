@@ -27,14 +27,15 @@ const columns = (remove_table_index) => [{
       options: posture,
   }
 },
+// {
+//   dataField: "behavior",
+//   text: "行为",
+//   editor: {
+//       type: Type.SELECT,
+//       options: behaviors,
+//   }
+// },
 {
-  dataField: "behavior",
-  text: "行为",
-  editor: {
-      type: Type.SELECT,
-      options: behaviors,
-  }
-},{
   dataField: "confidence",
   text: "遮挡",
   editor: {
